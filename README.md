@@ -1,6 +1,6 @@
 ## lainTSX
 
-A browser-based implementation of the Serial Experiments Lain PSX game using `react-three-fiber` with the aim to provide multi-language support and make it more accessible.
+A browser-based implementation of the Serial Experiments Lain PSX game using `three.js` with the aim to provide multi-language support and make it more accessible.
 
 ## History
 
@@ -13,28 +13,12 @@ Go to https://crowdin.com/project/lain-psx
 
 ## Building locally
 
-Building locally is currently not possible. This is because the repository lacks static assets ripped from the game due to it being copyrighted content. The plan is to write an extraction script (currently located inside `scripts/extract`), where the user who owns the game provides the disc binaries themselves, and the script automates the static file extraction. This script is still WIP.
+To build the game locally, you need to have the original binaries for both discs of the game.
 
-## Code strutcure
+1. Inside the `scripts` folder, create `discs` folder, and put both disc binaries there under the names `disc1.bin` and `disc2.bin`.
+2. Run `extract.mjs`. It also has potential flags you may want to use such as `--no-delete` and `--tempdir`.
 
-- **\_\_tests\_\_/** - Jest tests.
-
-- **src/**
-  - **components/canvas/** - TSX components used in the actual 3D environment (sprites, meshes, etc.).
-  - **components/dom/** - TSX components used for the website pages.
-  - **core/** - State management. Contextual (scene/state influenced) processors, mutation handler, event templates.
-  - **hooks/** - Custom hooks for React.
-  - **json/** - Reverse-engineered JSON data the game uses for a variety of tasks (node positions, font texture atlas definitions, etc.).
-  - **pages/** - Pages for the website (index, notes, guide, options, etc.).
-  - **shaders/** - Fragment/Vertex shaders.
-  - **styles/** - CSS.
-  - **types/** - Type definitions.
-  - **utils/** - Utilities/helper functions used to boostrap functionalities (node finding algorithm, name selection handlers, etc.).
-  - **store.ts** - Zustand store used for managing global state.
-
-- **scripts/**
-
-  - **extract/** - WIP extraction script to automate the local building process of the game.
+Note that currently the extraction script doesn't extract SFX, but the game still runs fine locally.
 
 ## TODO
 
@@ -45,7 +29,7 @@ Building locally is currently not possible. This is because the repository lacks
 
 <p align="center">
   <img src="screenshots/1.png" width="49%">
-  <img src="screenshots/2.jpg" width="49%">
+  <img src="screenshots/2.png" width="49%">
   <img src="screenshots/3.png" width="49%">
   <img src="screenshots/4.png" width="49%">
   <img src="screenshots/5.png" width="49%">
@@ -62,8 +46,3 @@ If you have any ideas/suggestions/found an issue or want to help us with the tra
 
 - [`jPSXdec`](https://github.com/m35/jpsxdec) - PlayStation 1 audio/video converter.
 - [`three.js`](https://github.com/mrdoob/three.js/) - JavaScript 3D renderer.
-- [`react-three-fiber`](https://github.com/pmndrs/react-three-fiber) - three.js wrapper for React.
-- [`zustand`](https://github.com/pmndrs/zustand) - State management library for React.
-- [`react-spring`](https://github.com/pmndrs/react-spring) - Animation library.
-- [`drei`](https://github.com/pmndrs/drei) - Utilities for react-three-fiber.
-- [`three-plain-animator`](https://github.com/MaciejWWojcik/three-plain-animator) - Sprite animation library.

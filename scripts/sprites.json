@@ -1,0 +1,563 @@
+[
+    {
+        "name": "not_found.png",
+        "commands": [
+            "magick bin_9_p1.png -crop 160x48+0+0 not_found_1.png",
+
+            "magick bin_9_p1.png -crop 160x48+0+48 not_found_2.png",
+            "magick not_found_1.png not_found_2.png +append not_found.png"
+        ]
+    },
+    {
+        "name": "not_found_lof.png",
+        "commands": ["magick bin_9_p0.png -crop 83x23+160+0 not_found_lof.png"]
+    },
+    {
+        "name": "pause_gray_boxes.png",
+        "commands": [
+            "magick bin_2_p0.png -crop 192x16+0+0 squares_1.png",
+            "magick bin_2_p0.png -crop 64x16+0+16 squares_2.png",
+            "magick squares_1.png squares_2.png +append pause_gray_boxes.png"
+        ]
+    },
+    {
+        "name": "select_level_down_arrow_active.png",
+        "commands": ["magick bin_23_p1.png -crop 24x13+120+66 select_level_down_arrow_active.png"]
+    },
+    {
+        "name": "select_level_up_arrow_active.png",
+        "commands": ["magick bin_23_p1.png -crop 24x13+96+66 select_level_up_arrow_active.png"]
+    },
+    {
+        "name": "select_level_font.png",
+
+        "commands": [
+            "magick bin_23_p0.png -crop 191x32+49+24 select_level_font_1.png",
+            "magick bin_23_p0.png -crop 46x32+49+56 select_level_font_2.png",
+            "magick select_level_font_1.png select_level_font_2.png +append select_level_font.png"
+        ]
+    },
+    {
+        "name": "select_level_hud_horizontal.png",
+        "commands": ["magick bin_23_p0.png -crop 236x24+0+0 select_level_hud_horizontal.png"]
+    },
+    {
+        "name": "select_level_hud_vertical.png",
+        "commands": ["magick bin_23_p0.png -crop 48x176+0+24 select_level_hud_vertical.png"]
+    },
+    {
+        "name": "select_level_text.png",
+        "commands": ["magick bin_23_p0.png -crop 37x8+97+56 select_level_text.png"]
+    },
+    {
+        "name": "select_level_up_arrow_inactive.png",
+
+        "commands": ["magick bin_23_p0.png -crop 24x13+96+66 select_level_up_arrow_inactive.png"]
+    },
+    {
+        "name": "select_level_down_arrow_inactive.png",
+        "commands": ["magick bin_23_p0.png -crop 24x13+120+66 select_level_down_arrow_inactive.png"]
+    },
+    {
+        "name": "load_fail.png",
+        "commands": ["magick bin_22_p0.png -crop 103x8+1+200 -background none load_fail.png"]
+    },
+    {
+        "name": "load_success.png",
+        "commands": ["magick bin_22_p0.png -crop 117x8+57+208 -background none load_success.png"]
+    },
+
+    {
+        "name": "save_success.png",
+        "commands": ["magick bin_22_p0.png -crop 117x8+57+184 -background none save_success.png"]
+    },
+    {
+        "name": "status_container.png",
+        "commands": [
+            "magick bin_22_p1.png -crop 144x15+0+224 -background none status_container_1.png",
+            "magick status_container_1.png -flop status_container_2.png",
+            "magick status_container_1.png status_container_2.png +append status_container.png"
+        ]
+    },
+    {
+        "name": "sskn_arrow.png",
+        "commands": ["magick bin_10_p1.png -crop 75x7+125+88 sskn_arrow.png"]
+    },
+    {
+        "name": "sskn_upgrade.png",
+        "commands": ["magick bin_10_p1.png -crop 86x18+152+18 sskn_upgrade.png"]
+    },
+    {
+        "name": "sskn_text_wrapper_active.png",
+        "commands": ["magick bin_10_p1.png -crop 106x12+128+72 sskn_text_wrapper_active.png"]
+    },
+    {
+        "name": "sskn_line.png",
+        "commands": ["magick bin_10_p1.png -crop 29x1+0+91 sskn_line.png"]
+    },
+    {
+        "name": "sskn_dango.png",
+
+        "commands": ["magick bin_10_p1.png -crop 123x14+0+72 sskn_dango.png"]
+    },
+    {
+        "name": "sskn_ok_inactive.png",
+        "commands": ["magick bin_10_p1.png -crop 32x14+152+2 sskn_ok_inactive.png"]
+    },
+    {
+        "name": "sskn_cancel_inactive.png",
+        "commands": ["magick bin_10_p1.png -crop 69x14+184+2 sskn_cancel_inactive.png"]
+    },
+    {
+        "name": "sskn_top_label.png",
+        "commands": ["magick bin_10_p2.png -crop 61x17+152+40 sskn_top_label.png"]
+    },
+    {
+        "name": "sskn_text_wrapper_inactive.png",
+        "commands": ["magick bin_10_p0.png -crop 106x12+128+72 sskn_text_wrapper_inactive.png"]
+    },
+    {
+        "name": "sskn_background_text_1.png",
+        "commands": ["magick bin_10_p0.png -crop 152x39+0+0 sskn_background_text_1.png"]
+    },
+    {
+        "name": "sskn_background_text_2.png",
+        "commands": ["magick bin_10_p0.png -crop 152x31+0+40 sskn_background_text_2.png"]
+    },
+    {
+        "name": "sskn_cancel_active.png",
+        "commands": ["magick bin_10_p0.png -crop 69x14+184+2 sskn_cancel_active.png"]
+    },
+    {
+        "name": "sskn_ok_active.png",
+        "commands": ["magick bin_10_p0.png -crop 32x14+152+2 sskn_ok_active.png"]
+    },
+    {
+        "name": "sskn_progress_bar.png",
+        "commands": ["magick bin_10_p4.png -crop 170x10+0+101 sskn_progress_bar.png"]
+    },
+    {
+        "name": "sskn_icon.png",
+
+        "commands": ["magick bin_10_p5.png -crop 92x80+0+112 sskn_icon.png"]
+    },
+    {
+        "name": "prompt_answer_container.png",
+        "commands": ["magick bin_2_p1.png -crop 50x24+192+0 prompt_answer_container.png"]
+    },
+    {
+        "name": "prompt_question_container.png",
+        "commands": [
+            "magick bin_2_p1.png -crop 160x24+64+24 pq_1.png",
+            "magick pq_1.png -flop pq_2.png",
+            "magick pq_1.png pq_2.png +append prompt_question_container.png"
+        ]
+    },
+    {
+        "name": "sskn_progress_bar_indicator_1.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+136+40 sskn_progress_bar_indicator_1.png"]
+    },
+    {
+        "name": "sskn_progress_bar_indicator_2.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+144+40 sskn_progress_bar_indicator_2.png"]
+    },
+    {
+        "name": "sskn_progress_bar_indicator_3.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+152+40 sskn_progress_bar_indicator_3.png"]
+    },
+    {
+        "name": "sskn_progress_bar_indicator_4.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+160+40 sskn_progress_bar_indicator_4.png"]
+    },
+
+    {
+        "name": "sskn_progress_bar_indicator_5.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+168+40 sskn_progress_bar_indicator_5.png"]
+    },
+    {
+        "name": "sskn_progress_bar_indicator_6.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+176+40 sskn_progress_bar_indicator_6.png"]
+    },
+    {
+        "name": "media_progress_bar_indicator_1.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+16+0 media_progress_bar_indicator_1.png"]
+    },
+    {
+        "name": "media_progress_bar_indicator_2.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+24+0 media_progress_bar_indicator_2.png"]
+    },
+    {
+        "name": "media_progress_bar_indicator_3.png",
+
+        "commands": ["magick bin_21_p0.png -crop 7x7+32+0 media_progress_bar_indicator_3.png"]
+    },
+    {
+        "name": "media_progress_bar_indicator_4.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+16+8 media_progress_bar_indicator_4.png"]
+    },
+    {
+        "name": "media_progress_bar_indicator_5.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+24+8 media_progress_bar_indicator_5.png"]
+    },
+    {
+        "name": "media_progress_bar_indicator_6.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+32+8 media_progress_bar_indicator_6.png"]
+    },
+    {
+        "name": "medium_hud.png",
+        "commands": [
+            "magick BIN.BIN[0]_p00.png -fuzz 10% -fill #00000080 -opaque black bb0t.png",
+            "magick bb0t.png -crop 248x7+0+0 medium_hud.png"
+        ]
+    },
+    {
+        "name": "boring_hud.png",
+        "commands": [
+            "magick BIN.BIN[0]_p00.png -fuzz 10% -fill #00000080 -opaque black bb0t.png",
+            "magick bb0t.png -crop 255x7+0+8 boring_hud.png"
+        ]
+    },
+    {
+        "name": "big_hud.png",
+        "commands": [
+            "magick BIN.BIN[0]_p00.png -fuzz 10% -fill #00000080 -opaque black bb0t.png",
+            "magick bb0t.png -crop 135x15+0+16 big_hud.png"
+        ]
+    },
+    {
+        "name": "media_progress_bar_indicator_2.png",
+        "commands": ["magick bin_21_p0.png -crop 7x7+24+0 media_progress_bar_indicator_2.png"]
+    },
+    {
+        "name": "audio_orb_orange.png",
+        "commands": ["magick bin_21_p0.png -crop 12x12+2+2 audio_orb_orange.png"]
+    },
+    {
+        "name": "audio_orb_yellow.png",
+        "commands": ["magick bin_21_p1.png -crop 12x12+2+2 audio_orb_yellow.png"]
+    },
+    {
+        "name": "lof_animation.png",
+        "commands": ["magick bin_21_p3.png -crop 192x23+0+49 lof_animation.png"]
+    },
+    {
+        "name": "about_bg.png",
+        "commands": [
+            "magick bin_15_p0.png bin_16_p0.png bin_17_p0.png -transparent white -append about_bg.png"
+        ]
+    },
+    {
+        "name": "word_background_inactive.png",
+        "commands": ["magick bin_21_p0.png -crop 132x14+2+16 word_background_inactive.png"]
+    },
+    {
+        "name": "word_background_active.png",
+        "commands": ["magick bin_21_p1.png -crop 132x14+2+16 word_background_active.png"]
+    },
+    {
+        "name": "media_node_name_container.png",
+        "commands": ["magick bin_21_p2.png -crop 75x15+138+15 media_node_name_container.png"]
+    },
+    {
+        "name": "media_progress_bar_container.png",
+        "commands": ["magick bin_21_p2.png -crop 153x15+62+0 media_progress_bar_container.png"]
+    },
+    {
+        "name": "loading_accela.png",
+        "commands": [
+            "magick bin_43_p0.png -crop 240x40+0+0 loading_accela_1.png",
+            "magick bin_43_p0.png -crop 240x40+0+40 loading_accela_2.png",
+            "magick bin_43_p0.png -crop 216x40+0+80 loading_accela_3.png",
+            "magick loading_accela_1.png loading_accela_2.png loading_accela_3.png -append loading_accela.png"
+        ]
+    },
+    {
+        "name": "life_instinct_function_os.png",
+
+        "commands": ["magick bin_43_p0.png -crop 32x40+216+80 life_instinct_function_os.png"]
+    },
+    {
+        "name": "blue_binary.png",
+        "commands": ["magick bin_25_p1.png -crop 192x32+0+72 blue_binary.png"]
+    },
+    {
+        "name": "blue_binary_zero.png",
+        "commands": ["magick bin_25_p1.png -crop 7x8+161+32 blue_binary_zero.png"]
+    },
+
+    {
+        "name": "blue_binary_one.png",
+        "commands": ["magick bin_25_p1.png -crop 3x8+171+32 blue_binary_one.png"]
+    },
+    {
+        "name": "change_site_enable.png",
+        "commands": ["magick bin_25_p0.png -crop 145x10+0+16 change_site_enable.png"]
+    },
+    {
+        "name": "gate_pass.png",
+        "commands": ["magick bin_25_p0.png -crop 119x16+0+0 gate_pass.png"]
+    },
+    {
+        "name": "gate_pass_underline.png",
+        "commands": [
+            "magick bin_25_p0.png -crop 160x1+0+32 gate_pass_underline_original.png",
+
+            "magick gate_pass_underline_original.png -flop gate_pass_underline_mirrored.png",
+            "magick gate_pass_underline_original.png gate_pass_underline_mirrored.png +append gate_pass_underline.png"
+        ]
+    },
+    {
+        "name": "left_gate_thing.png",
+        "commands": ["magick bin_25_p1.png -crop 50x26+0+40 left_gate_thing.png"]
+    },
+    {
+        "name": "right_gate_thing.png",
+        "commands": ["magick bin_25_p1.png -crop 50x26+62+40 right_gate_thing.png"]
+    },
+    {
+        "name": "you_got_an_access_pass.png",
+        "commands": ["magick bin_25_p0.png -crop 111x24+145+0 you_got_an_access_pass.png"]
+    },
+    {
+        "name": "disc_2.png",
+        "commands": ["magick bin_24_p0.png -crop 20x27+188+51 disc_2.png"]
+    },
+    {
+        "name": "disc_1.png",
+        "commands": ["magick bin_24_p0.png -crop 20x27+161+51 disc_1.png"]
+    },
+    {
+        "name": "disc.png",
+        "commands": ["magick bin_24_p0.png -crop 102x27+0+115 disc.png"]
+    },
+    {
+        "name": "disc_change_site.png",
+        "commands": ["magick bin_24_p0.png -crop 132x17+0+26 disc_change_site.png"]
+    },
+    {
+        "name": "disc_checking_in_progress.png",
+        "commands": ["magick bin_24_p0.png -crop 217x17+0+90 disc_checking_in_progress.png"]
+    },
+    {
+        "name": "disc_line.png",
+        "commands": [
+            "magick bin_24_p0.png -crop 144x1+0+80 disc_line_1.png",
+            "magick disc_line_1.png -flop disc_line_mirrored.png",
+            "magick disc_line_1.png disc_line_mirrored.png +append disc_line.png"
+        ]
+    },
+    {
+        "name": "disc_lof.png",
+        "commands": ["magick bin_24_p0.png -crop 95x29+104+115 disc_lof.png"]
+    },
+    {
+        "name": "disc_slope_line.png",
+        "commands": [
+            "magick bin_24_p0.png -crop 144x5+0+144 disc_slope_line_1.png",
+            "magick disc_slope_line_1.png -flop disc_slope_line_mirrored.png",
+            "magick disc_slope_line_1.png disc_slope_line_mirrored.png +append disc_slope_line.png"
+        ]
+    },
+    {
+        "name": "authorize_glass.png",
+        "commands": ["magick bin_4_p0.png -crop 70x51+168+8 authorize_glass.png"]
+    },
+    {
+        "name": "authorize_glass_underline.png",
+        "commands": ["magick bin_4_p0.png -crop 152x1+0+58 authorize_glass_underline.png"]
+    },
+    {
+        "name": "authorize_header_underline.png",
+        "commands": ["magick bin_4_p0.png -crop 256x1+0+6 authorize_header_underline.png"]
+    },
+    {
+        "name": "authorize_orange_square.png",
+        "commands": ["magick bin_8_p0.png -crop 16x16+224+64 authorize_orange_square.png"]
+    },
+    {
+        "name": "authorize_start_to_finish.png",
+        "commands": ["magick bin_4_p2.png -crop 167x9+1+40 authorize_start_to_finish.png"]
+    },
+    {
+        "name": "authorize_header.png",
+
+        "commands": ["magick bin_4_p2.png -crop 160x14+0+26 authorize_header.png"]
+    },
+    {
+        "name": "boot_bottom_bar_left.png",
+        "commands": ["magick bin_3_p0.png -crop 160x45+0+104 boot_bottom_bar_left.png"]
+    },
+
+    {
+        "name": "boot_bottom_bar_right.png",
+        "commands": ["magick boot_bottom_bar_left.png -flop boot_bottom_bar_right.png"]
+    },
+    {
+        "name": "boot_purple_square.png",
+        "commands": ["magick bin_3_p0.png -crop 16x16+208+16 boot_purple_square.png"]
+    },
+    {
+        "name": "boot_gray_square.png",
+        "commands": ["magick bin_3_p0.png -crop 16x16+224+16 boot_gray_square.png"]
+    },
+    {
+        "name": "dango_text.png",
+        "commands": ["magick bin_3_p0.png -crop 107x32+0+0 dango_text.png"]
+    },
+    {
+        "name": "miso_shio.png",
+        "commands": ["magick bin_3_p0.png -crop 44x13+208+0 miso_shio.png"]
+    },
+
+    {
+        "name": "boot_arrows.png",
+        "commands": ["magick bin_3_p0.png -crop 10x5+242+16 boot_arrows.png"]
+    },
+    {
+        "name": "boot_status_texts.png",
+        "commands": ["magick bin_3_p0.png -crop 256x64+0+32 boot_status_texts.png"]
+    },
+
+    {
+        "name": "boot_lof.png",
+        "commands": ["magick bin_3_p1.png -crop 95x29+112+3 boot_lof.png"]
+    },
+    {
+        "name": "authorize_user_inactive.png",
+        "commands": [
+            "magick bin_13_p0.png -alpha background -fill #C5C5C5FF -opaque #FF9C31FE -fill #848484FF -opaque #B56B19FE -fill #424242FF -opaque #5A3A10FE -transparent #422108FE -transparent #291908FE -transparent #211000FE -transparent #100800FE -transparent #080000FE -transparent #211008FE -transparent #422908FE -transparent #5A3110FE -transparent #311908FE -transparent #190800FE -colors 16 bin013_recolored.png",
+            "magick bin013_recolored.png -crop 160x25+0+4 authorize_user_inactive.png"
+        ]
+    },
+    {
+        "name": "load_data_inactive.png",
+        "commands": [
+            "magick bin_13_p0.png -alpha background -fill #C5C5C5FF -opaque #FF9C31FE -fill #848484FF -opaque #B56B19FE -fill #424242FF -opaque #5A3A10FE -transparent #422108FE -transparent #291908FE -transparent #211000FE -transparent #100800FE -transparent #080000FE -transparent #211008FE -transparent #422908FE -transparent #5A3110FE -transparent #311908FE -transparent #190800FE -colors 16 bin013_recolored.png",
+            "magick bin013_recolored.png -crop 109x24+0+37 load_data_inactive.png"
+        ]
+    },
+    {
+        "name": "authorize_user_active.png",
+        "commands": ["magick bin_13_p0.png -crop 160x25+0+4 authorize_user_active.png"]
+    },
+    {
+        "name": "load_data_active.png",
+        "commands": ["magick bin_13_p0.png -crop 109x24+0+37 load_data_active.png"]
+    },
+    {
+        "name": "load_data_header.png",
+        "commands": ["magick bin_13_p2.png -crop 109x14+0+66 load_data_header.png"]
+    },
+    {
+        "name": "load_data_header_underline.png",
+        "commands": ["magick authorize_header_underline.png -flop load_data_header_underline.png"]
+    },
+    {
+        "name": "login_intro_accela_animation.png",
+        "commands": [
+            "magick bin_42_p0.png -crop 240x40+0+0 login_intro_1.png",
+            "magick bin_42_p0.png -crop 240x40+0+40 login_intro_2.png",
+            "magick bin_42_p0.png -crop 216x40+0+80 login_intro_3.png",
+            "magick login_intro_1.png login_intro_2.png login_intro_3.png -append login_intro_accela_animation.png"
+        ]
+    },
+    {
+        "name": "make_me_sad.png",
+        "commands": ["magick bin_42_p0.png -crop 32x40+216+80 make_me_sad.png"]
+    },
+    {
+        "name": "authorize_letters_active.png",
+        "commands": [
+            "magick montage -mode concatenate bin_7_p1.png bin_6_p1.png bin_5_p1.png -background none authorize_letters_active.png"
+        ]
+    },
+
+    {
+        "name": "authorize_letters_inactive.png",
+        "commands": [
+            "magick montage -mode concatenate bin_7_p0.png bin_6_p0.png bin_5_p0.png -background none authorize_letters_inactive.png"
+        ]
+    },
+    {
+        "name": "network_os_logo.png",
+        "commands": ["magick bin_3_p1.png -crop 95x20+112+10 network_os_logo.png"]
+    },
+    {
+        "name": "boot_thing.png",
+        "commands": [
+            "magick bin_3_p0.png -crop 160x45+0+104 boot_thing_1.png",
+            "magick boot_thing_1.png -flop boot_thing_2.png",
+            "magick boot_thing_1.png boot_thing_2.png +append boot_thing.png"
+        ]
+    },
+    {
+        "name": "boot_bg_text.png",
+        "commands": [
+            "magick bin_3_p0.png -crop 128x69+0+33 boot_bg_text_1.png",
+            "magick boot_bg_text_1.png boot_bg_text_1.png -append boot_bg_text_2.png",
+
+            "magick boot_bg_text_2.png boot_bg_text_1.png -append boot_bg_text_3.png",
+            "magick boot_bg_text_3.png boot_bg_text_1.png -append boot_bg_text.png"
+        ]
+    },
+
+    {
+        "name": "end_circle_animation.png",
+
+        "commands": ["magick bin_31_p3.png -crop 62x30+161+41 end_circle_animation.png"]
+    },
+    {
+        "name": "end_continue_text.png",
+
+        "commands": ["magick bin_31_p2.png -crop 62x7+161+32 end_continue_text.png"]
+    },
+    {
+        "name": "end_end_text.png",
+        "commands": ["magick bin_31_p2.png -crop 44x14+178+16 end_end_text.png"]
+    },
+    {
+        "name": "end_middle_lain.png",
+        "commands": ["magick bin_31_p0.png -crop 178x14+0+0 end_middle_lain.png"]
+    },
+    {
+        "name": "end_middle_spritesheet.png",
+        "commands": ["magick bin_31_p1.png -crop 160x56+0+16 end_middle_spritesheet.png"]
+    },
+    {
+        "name": "end_cylinder_blue.png",
+        "commands": [
+            "magick montage -mode concatenate bin_26_p0.png bin_27_p0.png bin_28_p0.png bin_29_p0.png -background none end_cylinder_blue.png"
+        ]
+    },
+    {
+        "name": "polytan_head_hud.png",
+        "commands": ["magick bin_40_p0.png -crop 130x30+0+0 polytan_head_hud.png"]
+    },
+    {
+        "name": "polytan_right_arm_hud.png",
+        "commands": ["magick bin_40_p0.png -crop 103x46+0+34 polytan_right_arm_hud.png"]
+    },
+    {
+        "name": "polytan_right_leg_hud.png",
+        "commands": ["magick bin_40_p0.png -crop 89x23+0+80 polytan_right_leg_hud.png"]
+    },
+    {
+        "name": "polytan_body_hud.png",
+        "commands": ["magick bin_40_p0.png -crop 128x30+124+35 polytan_body_hud.png"]
+    },
+    {
+        "name": "polytan_left_arm_hud.png",
+        "commands": ["magick bin_40_p0.png -crop 111x30+119+63 polytan_left_arm_hud.png"]
+    },
+    {
+        "name": "polytan_left_leg_hud.png",
+
+        "commands": ["magick bin_40_p0.png -crop 118x48+105+96 polytan_left_leg_hud.png"]
+    },
+    {
+        "name": "orb.png",
+        "commands": [
+            "magick SLPS_016.03[12]_p00.png ( +clone -colorspace gray ) -alpha off -compose copy_opacity -composite orb.png"
+        ]
+    }
+]

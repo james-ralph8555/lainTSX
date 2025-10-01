@@ -1,44 +1,20 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-
-public/*
-!public/models/
-!public/media/
-public/media/*
-!public/media/webvtt
-
-scripts/extract/discs
-scripts/extract/*.log
+node_modules
+src/static/sprites
+public/media
+public/voice
+public/media-background-images
+public/sfx
+public/images/icon.png
+public/emote-wheel
+scripts/*
+!scripts/jpsxdec
+!scripts/dev
+scripts/dev/*
+!scripts/dev/*.js
+!scripts/*.mjs
+!scripts/*.cjs
+!scripts/*.ksy
+!scripts/*.json
+src/static/json/sprite_atlas.json
+src/textures.ts
+/dist
