@@ -13,8 +13,15 @@ Go to https://crowdin.com/project/lain-psx
 
 ## Building locally
 
-To build the game locally, you need to have the original binaries for both discs of the game.
+Since the repository doesn't host any of the game's assets, you need to provide the original binaries yourself.
+By using a script we extract and format the assets necessary from the provided binaries.
 
+Dependencies for running the script:
+- Java
+- FFmpeg
+- ImageMagick >= 7
+
+Instructions for running the script:
 1. Inside the `scripts` folder, create `discs` folder, and put both disc binaries there under the names `disc1.bin` and `disc2.bin`.
 2. Run `extract.mjs`. It also has potential flags you may want to use such as `--no-delete` and `--tempdir`.
 
