@@ -1,5 +1,6 @@
 import { engine_create, get_user_language, read_key_mappings, SceneKind } from "./engine";
 import { SiteScene } from "./site";
+import { gamepadManager } from "./gamepad";
 
 (async () => {
     let is_page_visible = !document.hidden;
@@ -9,6 +10,12 @@ import { SiteScene } from "./site";
     let time_paused = 0;
 
     const engine = await engine_create();
+    
+    // Expose gamepadManager globally for the modal to access
+    (window as any).game = {
+        engine: engine,
+        gamepadManager: gamepadManager
+    };
 
     function animate(): void {
         if (!is_page_visible) {
@@ -25,6 +32,9 @@ import { SiteScene } from "./site";
 
         const delta = (current_time - last_time) / 1000;
 
+        // Update gamepad states before engine update
+        gamepadManager.update(engine.key_states);
+        
         engine.update(current_time, delta);
 
         last_time = current_time;
@@ -64,6 +74,13 @@ import { SiteScene } from "./site";
 
     window.addEventListener("updatekeybindings", (_: Event) => {
         engine.key_mappings = read_key_mappings();
+    });
+
+    window.addEventListener("updategamepadlayout", (e: Event) => {
+        const customEvent = e as CustomEvent;
+        if (gamepadManager && customEvent.detail) {
+            gamepadManager.saveLayout(customEvent.detail);
+        }
     });
 
     window.addEventListener("updatelanguage", (_: Event) => {

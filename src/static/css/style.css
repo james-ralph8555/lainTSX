@@ -308,9 +308,10 @@ main {
 .language-entry:hover,
 .keybind-button:hover,
 .reset-keybindings-button:hover {
-    background: white;
-    color: black;
+    background: #333;
 }
+
+
 
 .language-entry.active {
     background: white;

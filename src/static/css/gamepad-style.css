@@ -1,0 +1,405 @@
+/* Gamepad Styles */
+.gamepad-layout-selector {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.gamepad-layout-selector label {
+    color: white;
+    text-align: center;
+}
+
+.gamepad-layout-buttons {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.gamepad-layout-entry {
+    text-align: center;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+}
+
+.gamepad-layout-entry:hover {
+    background: #333;
+}
+
+.gamepad-layout-entry.active {
+    background: white;
+    color: black;
+}
+
+.gamepad-visual-container {
+    display: flex;
+    gap: 3em;
+    margin: 1em 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.gamepad-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex-shrink: 0;
+}
+
+.gamepad-controller {
+    position: relative;
+    width: 420px;
+    height: 260px;
+    background: black;
+    border: 1px solid white;
+    border-radius: 16px;
+    padding: 1.25em;
+    flex-shrink: 0;
+    font-family: sans-serif;
+}
+
+.gamepad-dpad {
+    position: absolute;
+    left: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 84px;
+    height: 84px;
+}
+
+.gamepad-dpad-up {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 14px);
+}
+
+.gamepad-dpad-down {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 14px);
+}
+
+.gamepad-dpad-left {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 14px);
+}
+
+.gamepad-dpad-right {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 14px);
+}
+
+.gamepad-action-buttons {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 84px;
+    height: 84px;
+}
+
+.gamepad-button-north {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 14px);
+}
+
+.gamepad-button-south {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 14px);
+}
+
+.gamepad-button-west {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 14px);
+}
+
+.gamepad-button-east {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 14px);
+}
+
+.gamepad-shoulder-buttons {
+    position: absolute;
+    inset: 0;
+}
+
+.gamepad-shoulder-buttons .gamepad-button-l2 {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    width: 56px;
+    height: 48px;
+    border-radius: 0 !important;
+}
+
+.gamepad-shoulder-buttons .gamepad-button-r2 {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: 56px;
+    height: 48px;
+    border-radius: 0 !important;
+}
+
+.gamepad-shoulder-buttons .gamepad-button-l1 {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    width: 56px;
+    height: 28px;
+    border-radius: 0 !important;
+}
+
+.gamepad-shoulder-buttons .gamepad-button-r1 {
+    position: absolute;
+    top: 68px;
+    right: 20px;
+    width: 56px;
+    height: 28px;
+    border-radius: 0 !important;
+}
+
+.gamepad-center-buttons {
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Analog sticks */
+.gamepad-stick {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: black;
+}
+
+.gamepad-stick.left { left: 110px; bottom: 28px; }
+.gamepad-stick.right { right: 110px; bottom: 28px; }
+
+.gamepad-stick .thumb {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    transform: translate(-50%, -50%);
+}
+
+.gamepad-button {
+    background: black;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.gamepad-button:hover {
+    background: #333;
+}
+
+.gamepad-button.selected {
+    background: var(--orange);
+    color: black;
+    border-color: var(--orange);
+}
+
+.gamepad-button.highlighted {
+    box-shadow: 0 0 0 2px var(--orange);
+}
+
+.gamepad-button.pressed {
+    background: var(--lime);
+    color: black;
+    border-color: var(--lime);
+    box-shadow: 0 0 10px var(--lime);
+}
+
+.gamepad-mappings {
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid white;
+    padding: 1em;
+    background: black;
+}
+
+.gamepad-mapping-title {
+    margin-bottom: 0.5em;
+    color: white;
+    text-align: center;
+}
+
+.gamepad-mapping-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.gamepad-mapping {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    transition: all 0.2s ease;
+}
+
+.gamepad-mapping.highlighted {
+    background: var(--orange);
+    color: black;
+}
+
+.gamepad-mapping-button {
+    color: #aaa;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: 1px solid #444;
+    padding: 0.25em 0.5em;
+}
+
+.gamepad-mapping.highlighted .gamepad-mapping-button {
+    color: black;
+    border-color: var(--orange);
+}
+
+.gamepad-mapping-action {
+    color: #fff;
+    min-width: 250px;
+    text-align: right;
+}
+
+.gamepad-mapping.highlighted .gamepad-mapping-action {
+    color: black;
+}
+
+.reset-gamepad-button {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+.reset-gamepad-button:hover {
+    background: white;
+    color: black;
+}
+
+/* Select button - rectangle style like PS1 */
+.gamepad-button.gamepad-button-select {
+    background: black;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 40px;
+    height: 16px;
+    border-radius: 2px;
+}
+
+/* Start button - triangle shape like PS1 */
+.gamepad-button.gamepad-button-start {
+    background: black;
+    border: 1px solid white;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    border-left: 20px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: none;
+    background: transparent;
+}
+
+.gamepad-button.gamepad-button-select:hover,
+.gamepad-button.gamepad-button-start:hover {
+    border-left-color: #ccc;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.gamepad-button.gamepad-button-select.selected {
+    background: var(--orange);
+    color: black;
+    border-color: var(--orange);
+}
+
+.gamepad-button.gamepad-button-start.selected {
+    border-left-color: var(--orange);
+}
+
+.gamepad-button.gamepad-button-select.highlighted,
+.gamepad-button.gamepad-button-start.highlighted {
+    box-shadow: 0 0 0 2px var(--orange);
+}
+
+.gamepad-button.gamepad-button-select.pressed {
+    background: var(--lime);
+    color: black;
+    border-color: var(--lime);
+    box-shadow: 0 0 10px var(--lime);
+}
+
+.gamepad-button.gamepad-button-start.pressed {
+    border-left-color: var(--lime);
+    box-shadow: 0 0 10px var(--lime);
+}
+
+.gamepad-status {
+    margin-top: 1em;
+    padding: 0.75em;
+    background: black;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.gamepad-status-title {
+    color: white;
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+
+.gamepad-status-info {
+    color: var(--lime);
+    font-family: monospace;
+    font-size: 0.85em;
+    padding: 0.25em;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 2px;
+}
