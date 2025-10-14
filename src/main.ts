@@ -1,6 +1,6 @@
 import { engine_create, get_user_language, read_key_mappings, SceneKind } from "./engine";
 import { SiteScene } from "./site";
-import { gamepadManager } from "./gamepad";
+import { gamepad_manager_instance } from "./gamepad";
 
 (async () => {
     let is_page_visible = !document.hidden;
@@ -11,10 +11,9 @@ import { gamepadManager } from "./gamepad";
 
     const engine = await engine_create();
     
-    // Expose gamepadManager globally for the modal to access
     (window as any).game = {
         engine: engine,
-        gamepadManager: gamepadManager
+        gamepadManager: gamepad_manager_instance
     };
 
     function animate(): void {
@@ -32,8 +31,7 @@ import { gamepadManager } from "./gamepad";
 
         const delta = (current_time - last_time) / 1000;
 
-        // Update gamepad states before engine update
-        gamepadManager.update(engine.key_states);
+        gamepad_manager_instance.update(engine.key_states);
         
         engine.update(current_time, delta);
 
@@ -78,8 +76,8 @@ import { gamepadManager } from "./gamepad";
 
     window.addEventListener("updategamepadlayout", (e: Event) => {
         const customEvent = e as CustomEvent;
-        if (gamepadManager && customEvent.detail) {
-            gamepadManager.saveLayout(customEvent.detail);
+        if (gamepad_manager_instance && customEvent.detail) {
+            gamepad_manager_instance.save_layout(customEvent.detail);
         }
     });
 
