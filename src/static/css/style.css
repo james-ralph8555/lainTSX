@@ -632,3 +632,7 @@ main {
 #settings-button:hover {
     text-decoration: underline;
 }
+
+#media {
+    display: none;
+}

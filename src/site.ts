@@ -2618,16 +2618,7 @@ export class SiteScene extends THREE.Scene {
             this.descriptor,
             this.node_hud,
             this.level_selector,
-            this.background_sprite,
-            new Mesh(
-                new THREE.PlaneGeometry(),
-                new THREE.MeshBasicMaterial({ color: 0x0, depthTest: false, transparent: true }),
-                {
-                    scale: vec3(10, 10, 1),
-                    position: vec3(0, 0, -3.5),
-                    render_order: -6,
-                }
-            )
+            this.background_sprite
         );
 
         if (word_not_found) {

@@ -528,6 +528,13 @@ export class Engine {
             pause_audio(SFX.Site_Theme);
         }
 
+        const media_el = document.getElementById("media")!;
+        if (scene.scene_kind === SceneKind.Media || scene.scene_kind === SceneKind.Idle) {
+            media_el.style.display = "block";
+        } else {
+            media_el.style.display = "none";
+        }
+
         this.camera.updateProjectionMatrix();
     }
 
